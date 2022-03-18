@@ -8,7 +8,7 @@ from category.models import ProductCategory
 class TestProductsModel(TestCase):
 
     def setUp(self):
-        product = ProductCategory.objects.create(
+        category = ProductCategory.objects.create(
             name='prod_category',
             slug='prod_category',
             description='description'
@@ -19,7 +19,7 @@ class TestProductsModel(TestCase):
         )
 
         self.data1 = Product.objects.create(
-            category_id=product.id,
+            category_id=category.id,
             created_by_id=user.id,
             name='product_name',
             description='product_description',
