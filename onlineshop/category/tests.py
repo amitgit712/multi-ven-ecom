@@ -9,12 +9,14 @@ class TestCategoriesModel(TestCase):
         self.data1 = ProductCategory.objects.create(
             name='test_name',
             slug='test_name',
-            description='test_description'
+            description='test_description',
+            image='prodcat.img'
         )
         self.data2 = BlogCategory.objects.create(
             name='test_name',
             slug='test_name',
-            description='test_description'
+            description='test_description',
+            image='blogcat.img'
         )
 
     def test_product_category_model_entry(self):

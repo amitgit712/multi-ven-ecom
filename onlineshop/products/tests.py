@@ -23,7 +23,7 @@ class TestProductsModel(TestCase):
             created_by_id=user.id,
             name='product_name',
             description='product_description',
-            image='product.png',
+            image='product.img',
             slug='product_name',
             price='20.00'
         )

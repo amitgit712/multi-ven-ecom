@@ -30,4 +30,4 @@ class Vendor(models.Model):
         verbose_name_plural = 'Vendors'
 
     def __str__(self):
-        return f' {self.shop_name} - Created by : {self.created_by.username}'
+        return f' {self.shop_name} - Created by : {self.created_by.email}'

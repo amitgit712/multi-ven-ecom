@@ -1,3 +1,9 @@
 # from django.shortcuts import render
 
-# Create your views here.
+from .models import ProductCategory
+
+
+def product_categories(request):
+    return {
+        'product_categories': ProductCategory.objects.filter(active=True)
+    }
