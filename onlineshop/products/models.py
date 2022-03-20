@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 from category.models import ProductCategory
 from user.models import User
@@ -26,6 +27,9 @@ class Product(models.Model):
     class Meta:
         verbose_name_plural = 'Products'
         ordering = ('-created_at',)
+
+    def product_detail_url(self):
+        return reverse('products:product_detail', args=[self.slug])
 
     def __str__(self):
         return self.name

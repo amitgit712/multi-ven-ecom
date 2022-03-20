@@ -2,22 +2,23 @@
 {% block title %}
 <title>Home Page</title>
 {% endblock title %}
-
 {% block body %}
 <div class="container my-2">
     <form name="search">
         <div class="form-group has-search col-md-8 offset-md-2">
             <span class="fa fa-search form-control-feedback"></span>
             <input type="text" class="form-control" placeholder="Search for products">
-            <!-- <button type="submit"  class="btn btn-info"><i class="fa fa-search"></i></button> -->
+            
         </div>
     </form>
 </div>
+<home></home>
+
 <div class="container">
     <div class="my-2">
         <div class="row row-cols-1 row-cols-md-6 g-4">
             {% for c in product_categories %}
-            <a href="" class="a-text" style="text-decoration: none;">
+            <a href="{% url 'category:prod_category_wise' c.slug %}" class="a-text" style="text-decoration: none;">
                 <div class="col">
                     <div class="card h-100 procat">
                         <img src="{{ c.image.url }}" class="card-img-top" alt="...">
@@ -40,7 +41,7 @@
         <div class="row row-cols-1 row-cols-md-4 g-4">
 
             {% for p in recent_products %}
-            <a href="" class="a-text" style="text-decoration: none;">
+            <a href="{{ p.product_detail_url }}" class="a-text" style="text-decoration: none;">
                 <div class="col">
                     <div class="card h-100 procat">
                         <img src="{{ p.image.url }}" class="card-img-top" alt="...">
