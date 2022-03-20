@@ -1,13 +1,10 @@
-from django.test import TestCase, Client, RequestFactory
+from django.contrib.auth import get_user_model
 from django.http import HttpRequest
-
-from core.views import homepage
+from django.test import Client, RequestFactory, TestCase
 
 from category.models import ProductCategory
-
+from core.views import homepage
 from products.models import Product
-
-from django.contrib.auth import get_user_model
 
 
 class TestViewResponse(TestCase):

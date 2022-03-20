@@ -1,11 +1,9 @@
-from django.test import TestCase, Client
+from django.contrib.auth import get_user_model
+from django.test import Client, TestCase
 from django.urls import reverse
 
 from category.models import ProductCategory
-
 from products.models import Product
-
-from django.contrib.auth import get_user_model
 
 
 class TestViewResponse(TestCase):

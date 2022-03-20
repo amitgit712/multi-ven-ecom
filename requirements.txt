@@ -1,5 +1,6 @@
 Django==4.0.3
 flake8==4.0.1
+flake8-isort==4.1.1
 django-environ==0.8.1
 coverage==6.3.2
 Pillow==9.0.1

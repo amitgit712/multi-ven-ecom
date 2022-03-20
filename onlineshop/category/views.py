@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404, render
+
+from products.models import Product
 
 from .models import ProductCategory
-from products.models import Product
 
 
 def product_categories(request):
